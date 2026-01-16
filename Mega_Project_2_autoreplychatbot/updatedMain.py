@@ -32,7 +32,7 @@ def last_message(chatHistory):
     return lastMessage
 
 def aiProcess(chatHistory):
-    client = genai.Client(api_key="AIzaSyCmI2bVjq--neILUqqpKSMK7d09-UKPG-8")
+    client = genai.Client(api_key="Enter_API_KEY")
 
     prompt = f"""
     SYSTEM:
@@ -83,4 +83,5 @@ if __name__ == "__main__":
         if lastMessage.lower().startswith("mom"):
             reply = aiProcess(chatHistory)
             print(reply)
+
             reply_Push(reply)
